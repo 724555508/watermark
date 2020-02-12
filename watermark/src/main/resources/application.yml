@@ -1,0 +1,8 @@
+server: 
+  port: 4399
+soul:
+  http:
+    zookeeperUrl: 39.107.109.17:2181
+    adminUrl: http://v9spvbniswv.vshidai.top
+    contextPath: /open
+    appName: watermark
