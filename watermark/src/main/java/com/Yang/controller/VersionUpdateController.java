@@ -22,7 +22,7 @@ public class VersionUpdateController {
 		if(Is.Null(version)) {
 			return V.error("version none");
 		}
-		String newVersion = "1.0.4";
+		String newVersion = "1.0.5";
 		if(!version.equals(newVersion)) {
 			//需要更新
 			return V.isok()
