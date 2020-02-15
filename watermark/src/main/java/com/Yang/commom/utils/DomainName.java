@@ -33,6 +33,9 @@ public class DomainName {
 			values.put("b23.tv", 17);
 			values.put("bilibili.com", 17);
 			values.put("wide.meipai.com", 18);
+			values.put("post.mp.qq.com", 19);
+			values.put("eyepetizer.net", 20);
+			values.put("uc.cn", 21);
 		}
 	}
 

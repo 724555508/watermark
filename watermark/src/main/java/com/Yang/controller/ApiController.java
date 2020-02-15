@@ -18,6 +18,8 @@ import com.Yang.watermark.Bilibili;
 import com.Yang.watermark.Douyin;
 import com.Yang.watermark.Huoshan;
 import com.Yang.watermark.Inke;
+import com.Yang.watermark.Kaiyan;
+import com.Yang.watermark.Kandian;
 import com.Yang.watermark.Kuaishou;
 import com.Yang.watermark.Lishipin;
 import com.Yang.watermark.Miaopai;
@@ -25,6 +27,7 @@ import com.Yang.watermark.Pipixia;
 import com.Yang.watermark.Quanmin;
 import com.Yang.watermark.Qutoutiao;
 import com.Yang.watermark.Shuabao;
+import com.Yang.watermark.Uc;
 import com.Yang.watermark.Weishi;
 import com.Yang.watermark.Wide;
 import com.Yang.watermark.Xiaokaxiu;
@@ -105,6 +108,15 @@ public class ApiController {
 			case 18:
 				//wide
 				return V.isok("请求成功").setObject("url", Wide.get(url));
+			case 19:
+				//QQ看点
+				return V.isok("请求成功").setObject("url", Kandian.get(url));
+			case 20:
+				//开眼
+				return V.isok("请求成功").setObject("url", Kaiyan.get(url));
+			case 21:
+				//UC
+				return V.isok("请求成功").setObject("url", Uc.get(url));
 			default:
 				return V.unkownType();
 			}
