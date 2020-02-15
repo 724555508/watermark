@@ -25,7 +25,13 @@ import lombok.extern.slf4j.Slf4j;
 public class ExceptionHandle {
 	
 	
-
+	/**
+	 * 处理自定义异常
+	 */
+	@ExceptionHandler(MessageException.class)
+	public V handleRRException(MessageException e){
+		return V.error(e.getMessage());
+	}
 	
 	
 	/**
