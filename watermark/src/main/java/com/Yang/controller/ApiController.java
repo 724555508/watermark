@@ -25,6 +25,7 @@ import com.Yang.watermark.Lishipin;
 import com.Yang.watermark.Miaopai;
 import com.Yang.watermark.Pipixia;
 import com.Yang.watermark.Quanmin;
+import com.Yang.watermark.Quanminkg;
 import com.Yang.watermark.Qutoutiao;
 import com.Yang.watermark.Shuabao;
 import com.Yang.watermark.Uc;
@@ -117,6 +118,9 @@ public class ApiController {
 			case 21:
 				//UC
 				return V.isok("请求成功").setObject("url", Uc.get(url));
+			case 22:
+				//全面k歌
+				return V.isok("请求成功").setObject("url", Quanminkg.get(url));
 			default:
 				return V.unkownType();
 			}
