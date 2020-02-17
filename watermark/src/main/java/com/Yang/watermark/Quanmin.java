@@ -10,7 +10,6 @@ public class Quanmin extends BaseExecute{
 	
 	public Quanmin(String url) {
 		super(url);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -24,6 +23,4 @@ public class Quanmin extends BaseExecute{
 	public static String get(String address) {
 		return new Quanmin(address).execute();
 	}
-	
-	
 }

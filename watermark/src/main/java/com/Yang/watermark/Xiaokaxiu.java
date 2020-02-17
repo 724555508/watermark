@@ -24,8 +24,10 @@ public class Xiaokaxiu extends BaseExecute{
 		request.header("x-sign", getSign(time));
 		HttpResponse execute = request.execute();
 		String body = execute.body();
-		
-		return JSONObject.parseObject(body).getJSONObject("data").getJSONObject("video").getJSONArray("url").getString(0);
+		JSONObject video = JSONObject.parseObject(body).getJSONObject("data").getJSONObject("video");
+		String pic = video.getString("cover");
+		String title = video.getString("title");
+		return video.getJSONArray("url").getString(0);
 	}
 	
 	public static String get(String address) {
@@ -35,6 +37,10 @@ public class Xiaokaxiu extends BaseExecute{
 	
 	public static String getSign(Long times) {
 		return MD5.create().digestHex("S14OnTD#Qvdv3L=3vm&time=" + times);
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(Xiaokaxiu.get("https://mobile.xiaokaxiu.com/video?id=121865809"));
 	}
 
 	
