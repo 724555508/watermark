@@ -37,6 +37,8 @@ public class DomainName {
 			values.put("eyepetizer.net", 20);
 			values.put("uc.cn", 21);
 			values.put("kg2.qq.com", 22);
+			values.put("hibixin.com", 23);
+			values.put("huoguo.qq.com",24);
 		}
 	}
 

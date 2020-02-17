@@ -15,7 +15,9 @@ import com.Yang.commom.utils.DomainName;
 import com.Yang.commom.utils.Is;
 import com.Yang.commom.utils.V;
 import com.Yang.watermark.Bilibili;
+import com.Yang.watermark.Bixin;
 import com.Yang.watermark.Douyin;
+import com.Yang.watermark.Huoguo;
 import com.Yang.watermark.Huoshan;
 import com.Yang.watermark.Inke;
 import com.Yang.watermark.Kaiyan;
@@ -119,8 +121,14 @@ public class ApiController {
 				//UC
 				return V.isok("请求成功").setObject("url", Uc.get(url));
 			case 22:
-				//全面k歌
+				//全民k歌
 				return V.isok("请求成功").setObject("url", Quanminkg.get(url));
+			case 23:
+				//比心
+				return V.isok("请求成功").setObject("url", Bixin.get(url));
+			case 24:
+				//火锅视频
+				return V.isok("请求成功").setObject("url", Huoguo.get(url));
 			default:
 				return V.unkownType();
 			}
