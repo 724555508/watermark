@@ -3,6 +3,11 @@ package com.Yang.commom.utils;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.Yang.util.http.HttpUtil;
+import com.Yang.watermark.Headers;
+
+import cn.hutool.http.HttpRequest;
+
 public class UrlUtil {
 
 	public static class UrlEntity {
@@ -42,26 +47,11 @@ public class UrlUtil {
 		entity.params = new HashMap<>();
 		for (String param : params) {
 			String[] keyValue = param.split("=");
-			entity.params.put(keyValue[0], keyValue[1]);
+			if(keyValue.length > 1) {
+				entity.params.put(keyValue[0], keyValue[1]);
+			}
 		}
 
 		return entity;
 	}
-
-	/**
-	 * 测试
-	 *
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		UrlEntity entity = parse(null);
-		System.out.println(entity.baseUrl + "\n" + entity.params);
-		entity = parse("http://www.123.com");
-		System.out.println(entity.baseUrl + "\n" + entity.params);
-		entity = parse("http://www.123.com?id=1");
-		System.out.println(entity.baseUrl + "\n" + entity.params);
-		entity = parse("http://www.123.com?id=1&name=小明");
-		System.out.println(entity.baseUrl + "\n" + entity.params);
-	}
-	
 }

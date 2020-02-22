@@ -1,11 +1,6 @@
 package com.Yang.controller;
 
-import java.net.URLDecoder;
-import java.net.URLEncoder;
-
 import org.dromara.soul.client.common.annotation.SoulClient;
-import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,11 +20,14 @@ import com.Yang.watermark.Kandian;
 import com.Yang.watermark.Kuaishou;
 import com.Yang.watermark.Lishipin;
 import com.Yang.watermark.Miaopai;
+import com.Yang.watermark.Mogujie;
+import com.Yang.watermark.Neigeduanzi;
 import com.Yang.watermark.Pipixia;
 import com.Yang.watermark.Quanmin;
 import com.Yang.watermark.Quanminkg;
 import com.Yang.watermark.Qutoutiao;
 import com.Yang.watermark.Shuabao;
+import com.Yang.watermark.Toutu;
 import com.Yang.watermark.Uc;
 import com.Yang.watermark.Weishi;
 import com.Yang.watermark.Wide;
@@ -129,6 +127,15 @@ public class ApiController {
 			case 24:
 				//火锅视频
 				return V.isok("请求成功").setObject("url", Huoguo.get(url));
+			case 25:
+				//头图/内涵段友
+				return V.isok("请求成功").setObject("url", Toutu.get(url));
+			case 26:
+				//内个段子
+				return V.isok("请求成功").setObject("url", Neigeduanzi.get(url));
+			case 27:
+				//蘑菇街
+				return V.isok("请求成功").setObject("url", Mogujie.get(url));
 			default:
 				return V.unkownType();
 			}

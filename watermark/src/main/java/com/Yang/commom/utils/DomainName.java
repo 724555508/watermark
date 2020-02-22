@@ -39,6 +39,9 @@ public class DomainName {
 			values.put("kg2.qq.com", 22);
 			values.put("hibixin.com", 23);
 			values.put("huoguo.qq.com",24);
+			values.put("toutushare.com", 25);
+			values.put("clply.cn", 26);
+			values.put("mogu.com", 27);
 		}
 	}
 
