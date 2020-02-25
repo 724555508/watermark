@@ -29,7 +29,8 @@ public class Douyin extends BaseExecute{
 		log.info("item_id:{} , sign:{}" , item_id , sign);
 		
 		
-		HttpResponse response = request("https://www.iesdouyin.com/web/api/v2/aweme/iteminfo/?item_ids="+item_id+"&dytk=" + sign);
+		HttpResponse response = requestNoHeader("https://www.iesdouyin.com/web/api/v2/aweme/iteminfo/?item_ids="+item_id+"&dytk=" + sign);
+		log.info(response.body().toString());
 		JSONObject result = JSONObject.parseObject(response.body());
 		log.info(result.toString());
 		String url = result.getJSONArray("item_list").getJSONObject(0).getJSONObject("video").getJSONObject("play_addr").getJSONArray("url_list").getString(0);
@@ -40,8 +41,4 @@ public class Douyin extends BaseExecute{
 	public static String get(String address) {
 		return new Douyin(address).execute();
 	}
-
-
-
-	
 }
