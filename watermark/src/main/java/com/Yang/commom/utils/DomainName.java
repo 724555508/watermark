@@ -16,7 +16,7 @@ public class DomainName {
 			values.put("chenzhongtech.com", 2);
 			values.put("pipix.com", 3);
 			values.put("quanmin.hao222.com", 4);
-			values.put("haokan.baidu.com",4);
+			values.put("baidu.com",4);
 			values.put("3qtt.cn", 5);
 			values.put("shua8cn.com", 6);
 			values.put("weishi.qq.com", 7);

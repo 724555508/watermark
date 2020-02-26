@@ -14,6 +14,7 @@ public class Quanmin extends BaseExecute{
 
 	@Override
 	public String execute() {
+		url = getRealPlayAddress(url);
 		HttpResponse response = requestNoHeader(url);
 		String body = response.body();
 		return body.substring(body.indexOf(START) + 7, body.indexOf(END)).replaceAll("\\\\", "");
